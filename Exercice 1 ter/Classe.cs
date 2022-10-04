@@ -12,7 +12,7 @@ namespace Exercice_1_ter
 		#region attributs
 		public List<Eleve> Eleves { get; set; }
 		public Professeur elProfesseur { get; set; }
-		public string Matiere { get; set; }
+		public string? Matiere { get; set; }
 
 
 		#endregion
