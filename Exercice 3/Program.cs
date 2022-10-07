@@ -26,7 +26,7 @@ namespace Exercice_3
 
             foreach (Salarie salarie in ListeSalaries)
             {
-                Console.WriteLine(salarie.Présentation() + " - Calcul du salaire : " + salarie.CalculerSalaireNet() + "€");
+                Console.WriteLine(salarie.Présentation() + " --> Calcul du salaire : " + salarie.CalculerSalaireNet() + "€");
                 
             }
 
