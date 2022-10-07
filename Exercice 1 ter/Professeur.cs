@@ -15,7 +15,7 @@ namespace Exercice_1_ter
 
         public string? nom { get; set; }
         public string? prenom { get; set; }
-        public string? genre
+        public string genre
         {
             get
             {

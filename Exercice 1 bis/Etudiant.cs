@@ -4,26 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercice_1_bis
+namespace Exercice_1bis
 {
-    public class Eleve : Personne
-    {
-		#region attributs
-		/*
+	public class Etudiant
+	{
 		private string _nom;
 		private string _prenom;
 		private string _genre;
 		private int _age;
-		*/
-
-
-		public string nom { get; set; }
-		public string prenom { get; set; }
-
-		public string genre { get; set; }
-
-		public int age { get; set; }
-        /*
 		public int Age
 		{
 			get { return _age; }
@@ -44,16 +32,10 @@ namespace Exercice_1_bis
 			get { return _nom; }
 			set { _nom = value; }
 		}
-		*/
-        #endregion
 
-
-        public Eleve(string nom, string prenom, string genre, int age) : base(nom, prenom, genre, age)
-        {
-            this.nom = nom;
-            this.prenom = prenom;
-            this.genre = genre;
-            this.age = age;
-        }
-    }
+		public void SePresenter()
+		{
+			Console.WriteLine($"Bonjour, je m'appelle {Genre} {_nom} {_prenom} et j'ai {_age} ans");
+		}
+	}
 }

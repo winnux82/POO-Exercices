@@ -9,10 +9,10 @@ namespace Exercice_1_ter
 	public class Eleve : Personne
 	{
 		#region attributs
-		public string? nom { get; set; }
-		public string? prenom { get; set; }
-		public string? genre { get; set; }
-		public int? age { get; set; }
+		public string nom { get; set; }
+		public string prenom { get; set; }
+		public string genre { get; set; }
+		public int age { get; set; }
 		#endregion
 
 

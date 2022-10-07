@@ -8,10 +8,10 @@ namespace Exercice_1_ter
 {
     public abstract class Personne
     {
-        protected string? nom;
-        protected string? prenom;
-        protected int? age;
-        protected string? genre;
+        protected string nom;
+        protected string prenom;
+        protected int age;
+        protected string genre;
 
         public Personne(string nom, string prenom, string genre, int age)
         {
@@ -19,7 +19,7 @@ namespace Exercice_1_ter
             this.prenom = prenom;
             this.age = age;
             this.genre = genre;
-          }
+                   }
 
         public void Créer(Personne unePersonne)
         {

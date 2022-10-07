@@ -4,30 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercice_1bis
+namespace Exercice_1ter
 {
 	public class Classe
 	{
-		private string _matiere;
-		private Professeur _prof;
-		private List<Etudiant> etudiants;
+		public List<Etudiant> Etudiants { get; set; }
+		public Professeur Prof { get; set; }
+		public string Matiere { get; set; }
 
-		public List<Etudiant> Etudiants
+		private Classe()
 		{
-			get { return etudiants; }
-			set { etudiants = value; }
+
 		}
-
-		public Professeur Prof
+		public Classe(List<Etudiant> etudiants, Professeur prof, string matiere)
 		{
-			get { return _prof; }
-			set { _prof = value; }
-		}
-
-		public string Matiere
-		{
-			get { return _matiere; }
-			set { _matiere = value; }
+			Etudiants = etudiants;
+			Prof = prof;
+			Matiere = matiere;
 		}
 
 		public void SePresenter()

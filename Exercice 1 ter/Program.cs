@@ -19,6 +19,7 @@ namespace Exercice_1_ter
             Eleve etudiant3 = new Eleve("Dumarcher", "Elise", "Madame", 25);
             Eleve etudiant4 = new Eleve("Laporte", "Céline", "Madame", 28);
 
+
             etudiant1.SePrésenter();
             prof.SePrésenter();
 
@@ -32,6 +33,8 @@ namespace Exercice_1_ter
             InfoClasse.Eleves = ListeEtudiants;
 
             InfoClasse.SePresenter();
+
+            
         }
     }
 }

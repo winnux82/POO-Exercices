@@ -4,21 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercice_1_bis
+namespace Exercice_1bis
 {
-    public class Professeur : Personne
+    public class Professeur
     {
+        #region attributs ou champs
+        private string _nom;
+        private string _prenom;
+        private string _genre;
+        private int _age;
+        private Classe classe;
+        #endregion
 
-        #region Attributs
-
-
-
-        public string nom { get; set; }
-        public string prenom { get; set; }
-        public string genre { get; set; }
-        public int age { get; set; }
-        private Classe maclasse { get; set; }
-        /*#region Accesseurs
+        #region Accesseurs
         public Classe Maclasse
         {
             get { return classe; }
@@ -59,15 +57,11 @@ namespace Exercice_1_bis
             set { _nom = value; }
         }
         #endregion
-        */
-        #endregion
 
-        public Professeur(string nom, string prenom, string genre, int age) : base(nom, prenom,genre, age)
+        public void SePresenter()
         {
-            this.nom = nom.ToUpper();
-            this.prenom = prenom;
-            this.genre = genre;
-            this.age = age;
+            Console.WriteLine($"Bonjour, je m’appelle {Genre} {Nom} {Prenom} et je suis votre professeur de {Maclasse.Matiere}");
+
         }
     }
 }
