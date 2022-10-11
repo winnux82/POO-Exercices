@@ -4,23 +4,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercice_3
+namespace Exercice_4
 {
 
     public class Salarie
     {
         #region attributs
+        private static int Nb=1;
+        private string _id;
+        private int _globalid=1;
         private int _matricule;
         private string _nom;
         private string _prenom;
         private float _salaire;
         private float _tauxcs;
-        public static float TauxCS = 0.22f;
+        private static float TauxCS = 0.22f;
 
         #endregion
 
         #region getter/setter
         //sert à protéger et à faire des conditions.
+
+
+
+        public string ID
+        {
+            get { return _id; }
+            set { _id = value; }
+        }
+
+
+        public int GlobalId
+        {
+            get { return _globalid; }
+
+            set {
+                _globalid = value;
+            }
+        }
+
         public int Matricule
         {
             get { return _matricule; }
@@ -53,7 +75,8 @@ namespace Exercice_3
         //différentes signatures
         public Salarie()
         {
-            
+            ID = System.Guid.NewGuid().ToString();
+            GlobalId = AutoIncrémentation();
         }
         //surcharger la méthode.
         public Salarie(int matricule) : this()
@@ -61,34 +84,38 @@ namespace Exercice_3
             Matricule = matricule;
         }
 
-        public Salarie(int matricule,string nom) 
+        public Salarie(int matricule, string nom):this()
         {
-            Matricule = matricule;
             Nom = nom;
         }
 
-        public Salarie(int matricule, string nom, string prenom, float salaire)
-        {
+        public Salarie(int matricule, string nom, string prenom, float salaire):this()
 
+        {
             Matricule = matricule;
             Nom = nom;
             Prenom = prenom;
             Salaire = salaire;
-            
         }
 
         public string Présentation()
         {
-            
-            return $"Matricule --> {Matricule} \n Nom --> {Nom} \n Prenom --> {Prenom} \n Salaire --> {Salaire}€ \n Taux -->{TauxCS}\n";
-            
+
+            return $" Id --> {ID} \n GlobalID --> {GlobalId} \n IMatricule --> {Matricule} \n Nom --> {Nom} \n Prenom --> {Prenom} \n Salaire --> {Salaire}€ \n Taux -->{TauxCS}\n\n";
+
         }
         public float CalculerSalaireNet()
         {
-            
             return Salaire = Salaire - (Salaire * TauxCS);
-
-            
         }
+
+        private int AutoIncrémentation()
+        {
+            return Nb++;
+        }
+
+
     }
+
+
 }
