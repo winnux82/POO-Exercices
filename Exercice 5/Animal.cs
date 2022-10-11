@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercice_5
 {
-    public  class Animal
+    public class Animal
     {
         private string _cri;
         private int _age;
@@ -25,6 +25,9 @@ namespace Exercice_5
         public static int AgeMaximum;
 
 
+        public Animal()
+        {
+        }
 
         public Animal(string cri, int age)
         {
