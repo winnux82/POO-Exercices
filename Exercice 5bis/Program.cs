@@ -43,6 +43,12 @@ namespace Exercice_5
             ee.ToString();
             Console.WriteLine(ee);
             ee.Description();
+
+            Animal OiseauEssai = new Oiseau(2);
+            OiseauEssai.Description();
+
+            Animal Corbeau1 = new Corbeau(4);
+            Corbeau1.Description();
             
 
             Oiseau Moineau = new Oiseau("piaille ", 2);
@@ -58,11 +64,10 @@ namespace Exercice_5
             aigle1.Description();
 
 
-            Chien Rantanplan = new Chien("Rantanplan", "aboit", 5);
+            Chien Rantanplan = new Chien("Rantanplan",  5);
 
             Rantanplan.Veillit();
             Rantanplan.Mange();
-            Rantanplan.SeDeplace();
             Rantanplan.Description();
             
 

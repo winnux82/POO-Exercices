@@ -29,24 +29,23 @@ namespace Exercice_5
         {
         }
 
-        public Animal(string cri, int age)
+        public Animal(int age) :this()
         {
-            Cri = cri;
             Age = age;
         }
-
-        public Animal(int age, int ageMaximum)
+        public Animal(string cri, int age):this()
         {
-            Age=age;
+            Cri = cri;
+        }
+
+        public Animal(int age, int ageMaximum):this()
+        {
             ageMaximum = age;
         }
 
 
         public Animal(string cri, int age, int ageMaximum):this()
         {
-
-            Cri = cri;
-            Age = age;
             AgeMaximum = ageMaximum;
         }
 
