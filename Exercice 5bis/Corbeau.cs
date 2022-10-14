@@ -15,7 +15,7 @@ namespace Exercice_5
             Age=ageCorbeau;
         }
 
-        public override void Description()
+        public new void Description()
         {
             Console.WriteLine("Description du Corbeau");
             this.SeDeplace();

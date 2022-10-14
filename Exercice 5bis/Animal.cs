@@ -22,7 +22,7 @@ namespace Exercice_5
             set { _age = value; }
         }
 
-        public static int AgeMaximum;
+        public int AgeMaximum;
 
 
         public Animal()
@@ -62,18 +62,23 @@ namespace Exercice_5
         {
             Console.WriteLine($"L'animal se déplace de {mètres} mètres");
         }
-        public void Veillit()
+        public void Vieillit()
         {
             Console.WriteLine(++Age);
         }
-        public void Veillit(int nb)
+        public void Vieillit(int age)
         {
-
-            if ((Age + nb) > AgeMaximum)
-                Console.WriteLine("Impossible, l'animal est mort");
+            Age += age;
+            if (Age > AgeMaximum)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("L'animal est mort, il a dépassé son espérance de vie");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
             else
-                Age += nb;
-                Console.WriteLine($"L'animal a {Age} ans");
+            {
+                Console.WriteLine($"L'animal a {Age} ans et il est toujours en vivant");
+            }
         }
         public void Mange()
         {

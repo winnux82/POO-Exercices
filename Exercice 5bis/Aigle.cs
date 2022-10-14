@@ -11,9 +11,9 @@ namespace Exercice_5
 
         public Aigle(string criAigle, int ageAigle) : base(criAigle, ageAigle)
         {
-            criAigle = Cri;
-            ageAigle = Age;
-           
+            Cri = criAigle;
+            Age = ageAigle;
+            AgeMaximum = 10;
 
         }
 

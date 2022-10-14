@@ -29,7 +29,7 @@ namespace Exercice_5
         {
         }
 
-        public Animal(string cri, int age)
+        public Animal(string cri, int age):this()
         {
             Cri = cri;
             Age = age;
