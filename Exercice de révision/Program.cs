@@ -16,6 +16,7 @@ namespace Exercice_de_révision
             ListePlanetes.Add(new Planete("Jupiter", 11.209f, 317.8f));
 
             Galaxie voie_lactée = new Galaxie("voie_lactée");
+            ListePlanetes = ListePlanetes.OrderBy(p => p.Nom).ToList();
 
             voie_lactée.Description();
             foreach(Planete p in ListePlanetes)
