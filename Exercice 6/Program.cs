@@ -15,7 +15,7 @@ namespace Exercice_6
 
             Employé employé1 = new Employé("Defunès", "Louis", new DateTime(1914, 07, 31), 2100.6f);
             employé1.Présentation();
-
+            
         }
     }
 }
