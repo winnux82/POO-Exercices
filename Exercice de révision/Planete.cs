@@ -53,7 +53,7 @@ namespace Exercice_de_révision
         }
         public Planete(string nom, float masse, float diametre) : this(nom,diametre)
         {
-            Masse = masse;
+            this.Masse = masse;
         }
 
 
