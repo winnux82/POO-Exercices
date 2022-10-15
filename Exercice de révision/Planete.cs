@@ -47,16 +47,13 @@ namespace Exercice_de_révision
             this.Nom = nom;
         }
 
-        public Planete(string nom, float diametre) : this(nom)
+        public Planete(string nom, float diametre) : this(nom)  
         {
-            this.Nom = nom;
             this.Diametre = diametre;
         }
         public Planete(string nom, float masse, float diametre) : this(nom,diametre)
         {
-            Nom = nom;
             Masse = masse;
-            Diametre = diametre;
         }
 
 

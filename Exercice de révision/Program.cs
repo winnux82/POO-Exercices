@@ -18,6 +18,7 @@ namespace Exercice_de_révision
             Galaxie voie_lactée = new Galaxie("voie_lactée");
             ListePlanetes = ListePlanetes.OrderBy(p => p.Nom).ToList();
 
+            
             voie_lactée.Description();
             foreach(Planete p in ListePlanetes)
             {
