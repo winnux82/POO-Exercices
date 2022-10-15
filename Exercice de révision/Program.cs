@@ -15,16 +15,11 @@ namespace Exercice_de_révision
             Planete planete4 = new Planete("Mars", 0.532f, 0.11f);
             Planete planete5 = new Planete("Jupiter", 11.209f, 317.8f);
 
-            List<Planete> Planetes = new List<Planete>() { planete1, planete2, planete3, planete4,planete5 };
+            List<Planete> ListePlanetes = new List<Planete>() { planete1, planete2, planete3, planete4,planete5 };
 
-
-
-            Galaxie voie_lactée = new Galaxie("voie_lactée", Planetes);
-            Planetes = Planetes.OrderBy(p => p.Nom).ToList();
-            
+            Galaxie voie_lactée = new Galaxie("Voie Lactée", ListePlanetes);
 
             voie_lactée.Description();
-
 
         }
     }

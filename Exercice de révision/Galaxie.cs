@@ -16,7 +16,7 @@ namespace Exercice_de_révision
 
         #region Méthodes
 
-        public Galaxie(string nomgalaxie, List<Planete> listePlanetes)
+        public Galaxie(string nomgalaxie, List<Planete> listePlanetes=null)
         {
             NomGalaxie = nomgalaxie;
             ListePlanetes = listePlanetes;
@@ -27,12 +27,13 @@ namespace Exercice_de_révision
         public void Description()
         {
             Console.WriteLine($"Je suis la galaxie {NomGalaxie} et je possède {ListePlanetes.Count} planètes.");
-
-            foreach (Planete p in ListePlanetes)
+            if(ListePlanetes.Count > 0)
             {
-                p.Description();
+                foreach (Planete p in ListePlanetes)
+                {
+                    p.Description();
+                }
             }
-
         }
         #endregion
 
