@@ -9,21 +9,29 @@ namespace Exercice_de_révision
     public class Galaxie
     {
         #region getter/setter
-        public string? Nom { get; set; }
-
+        public string? NomGalaxie { get; set; }
+        public List<Planete> ListePlanetes { get; set; }
 
         #endregion
 
         #region Méthodes
 
-        public Galaxie(string nom)
+        public Galaxie(string nomgalaxie, List<Planete> listePlanetes)
         {
-            this.Nom = nom;
+            NomGalaxie = nomgalaxie;
+            ListePlanetes = listePlanetes;
+
+            
         }
 
         public void Description()
         {
-            Console.WriteLine($"Je suis la galaxie {Nom} et je possède {Planete.NbPlanetes} planètes.");
+            Console.WriteLine($"Je suis la galaxie {NomGalaxie} et je possède {ListePlanetes.Count} planètes.");
+
+            foreach (Planete p in ListePlanetes)
+            {
+                p.Description();
+            }
 
         }
         #endregion

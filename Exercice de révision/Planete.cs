@@ -37,12 +37,8 @@ namespace Exercice_de_révision
         #endregion
 
         #region Méthodes
-        public Planete()
-        {
-            NbPlanetes++;
-        }
 
-        public Planete(string nom) : this()
+        public Planete(string nom)
         {
             this.Nom = nom;
         }
