@@ -10,6 +10,11 @@ namespace Exercice_de_révision
     {
         #region attributs
         private string _nom="";
+        private float _masse;
+        private float _diametre;
+        #endregion
+
+        #region Accesseurs
 
         public string Nom
         {
@@ -17,28 +22,22 @@ namespace Exercice_de_révision
             set { _nom = value; }
         }
 
-        private float _masse;
-
         public float Masse
         {
+            //veillez empêcher la modification, en mettant setter private on peut encore l'utiliser mais pas en externe.  Cette partie là est réservée à ma classe.
             get { return _masse; }
-            set { _masse = value; }
+            private set { _masse = value; }
         }
-
-        private float _diametre;
 
         public float Diametre
         {
             get { return _diametre; }
             set { _diametre = value; }
         }
-
-        public static int NbPlanetes;
         #endregion
 
         #region Méthodes
-
-        public Planete(string nom)
+        protected Planete(string nom)
         {
             this.Nom = nom;
         }
@@ -52,9 +51,14 @@ namespace Exercice_de_révision
             this.Masse = masse;
         }
 
+        //CTRL . pour créer les constructeurs.
+        //propfull
+        //ctor
+
 
         public void Description()
         {
+            //Console.WriteLine($"Je suis la planète {1} de masse {2} relative par rapport à la terre.",Nom,Masse);
             Console.WriteLine($"Je suis la planète {Nom} de masse {Masse} relative par rapport à la terre.");
         }
 
