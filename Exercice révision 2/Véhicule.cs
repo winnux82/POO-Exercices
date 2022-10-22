@@ -56,7 +56,7 @@ namespace Exercice_révision_2
 
         public Véhicule(string immatriculation, string fabricant, string modèle, DateTime datefabrication)
         {
-            this.ID= AutoIncrémentation();
+            this.ID = Nb++;
             this.Immatriculation = immatriculation;
             this.Fabricant = fabricant;
             this.Modèle = modèle;
@@ -75,10 +75,6 @@ namespace Exercice_révision_2
         public virtual void Accélérer()
         {
             Console.WriteLine("Le véhicule accélère");
-        }
-        private int AutoIncrémentation()
-        {
-            return Nb++;
         }
 
         public virtual void Afficher()

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace Exercice_2
+﻿namespace Exercice_2
 {
     public class Program
     {
@@ -31,51 +27,44 @@ namespace Exercice_2
                 Console.WriteLine(auto.Presentation());
             }
 
-            do
+            while (true)
             {
-
-      
-            Console.Write("\nVeuillez entrer un numéro de matricule : ");
-
-            if (Console.ReadKey().Key == ConsoleKey.Escape)
-            {
-                Environment.Exit(0);
-            }
-
-            string matricule = Console.ReadLine().ToUpper();
-
-            if (Console.ReadKey().Key == ConsoleKey.Escape)
-            {
-                Environment.Exit(0);
-            }
+                Console.Write("\nVeuillez entrer un numéro de matricule : ");
+                //if (Console.ReadKey().Key == ConsoleKey.Escape)
+                //{
+                //    Environment.Exit(0);
+                //}
+                string matricule = Console.ReadLine().ToUpper();
 
                 bool isExist = false;
-            foreach (Voiture auto in voitures)
-            {
-                if (!isExist)
-                    isExist = (auto.Matricule == matricule);
-                if (isExist)
+                foreach (Voiture auto in voitures)
                 {
-                    Console.WriteLine(auto.Presentation());
-                    break;
+                    if (!isExist)
+                        isExist = (auto.Matricule == matricule);
+                    if (isExist)
+                    {
+                        Console.WriteLine(auto.Presentation());
+                        break;
+                    }
                 }
+
+                if (isExist == false)
+                {
+                    Console.WriteLine("matricule inexistant");
+                }
+
+                Voiture automobile = voitures.Find(auto => auto.Matricule == matricule);
+                if (automobile != null)
+                    Console.WriteLine(automobile.Presentation());
+                else
+                    Console.WriteLine("matricule inexistant");
+
+
+
+
+
+
             }
-
-            if (isExist == false)
-            {
-                Console.WriteLine("matricule inexistant");
-            }
-
-            Voiture automobile = voitures.Find(auto => auto.Matricule == matricule);
-            if (automobile != null)
-                Console.WriteLine(automobile.Presentation());
-            else
-                Console.WriteLine("matricule inexistant");
-
-
-
-
-            }while(true);
 
 
 
