@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercice_révision_2
 {
-    public abstract class Véhicule
+    public class Véhicule
     {
         private static int Nb = 1;
         #region Getter/setter
@@ -79,6 +79,11 @@ namespace Exercice_révision_2
         private int AutoIncrémentation()
         {
             return Nb++;
+        }
+
+        public virtual void Afficher()
+        {
+            Console.WriteLine("Bonjour");
         }
         #endregion
 

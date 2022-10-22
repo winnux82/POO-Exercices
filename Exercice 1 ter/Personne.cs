@@ -19,7 +19,7 @@ namespace Exercice_1_ter
             this.prenom = prenom;
             this.age = age;
             this.genre = genre;
-                   }
+         }
 
         public void Créer(Personne unePersonne)
         {

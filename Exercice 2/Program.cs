@@ -31,10 +31,25 @@ namespace Exercice_2
                 Console.WriteLine(auto.Presentation());
             }
 
-            Console.Write("\nVeuillez entrer un numéro de matricule : ");
-            string matricule = Console.ReadLine();
+            do
+            {
 
-            bool isExist = false;
+      
+            Console.Write("\nVeuillez entrer un numéro de matricule : ");
+
+            if (Console.ReadKey().Key == ConsoleKey.Escape)
+            {
+                Environment.Exit(0);
+            }
+
+            string matricule = Console.ReadLine().ToUpper();
+
+            if (Console.ReadKey().Key == ConsoleKey.Escape)
+            {
+                Environment.Exit(0);
+            }
+
+                bool isExist = false;
             foreach (Voiture auto in voitures)
             {
                 if (!isExist)
@@ -50,14 +65,20 @@ namespace Exercice_2
             {
                 Console.WriteLine("matricule inexistant");
             }
-            
+
             Voiture automobile = voitures.Find(auto => auto.Matricule == matricule);
             if (automobile != null)
                 Console.WriteLine(automobile.Presentation());
             else
                 Console.WriteLine("matricule inexistant");
 
-            
+
+
+
+            }while(true);
+
+
+
 
         }
     }
