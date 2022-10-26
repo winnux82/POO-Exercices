@@ -49,21 +49,25 @@ namespace Exercice_Révision_Etudiants
 
         public void Présentation()
         {
-            Console.WriteLine($"Pour l'année scoclaire {Year} - {Year+1} ");
-            Console.WriteLine("Liste des étudiants:");
+            Console.WriteLine($"Pour l'année scolaire {Year} - {Year+1} ");
+            Console.WriteLine("\n\nListe des étudiants:");
+            Console.WriteLine("-------------------");
+
             foreach(Student student in ListeEtudiants)
             {
                student.Présentation();
             }
 
-            Console.WriteLine("Liste des profs:");
-                            foreach (Teacher prof in ListeProf)
+            Console.WriteLine("\n\nListe des profs:");
+            Console.WriteLine("-------------------");
+            foreach (Teacher prof in ListeProf)
             {
                 prof.Présentation();
             }
 
-            Console.WriteLine("Liste des matières:");
-            foreach(Subject matière in ListeMatières)
+            Console.WriteLine("\n\nListe des matières:");
+            Console.WriteLine("-------------------");
+            foreach (Subject matière in ListeMatières)
             {
                 matière.Présentation();
             }

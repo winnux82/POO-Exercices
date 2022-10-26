@@ -42,7 +42,7 @@ namespace Exercice_Révision_Etudiants
         public override void Présentation()
         {
             base.Présentation();
-            Console.Write($":: {PersoId} :: {PersoPwd}");
+            Console.Write($"Identifiant : {PersoId} \nMot de passe: {PersoPwd}");
         }
     }
 }
