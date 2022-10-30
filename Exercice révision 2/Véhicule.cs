@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Exercice_révision_2
 {
-    public class Véhicule
+    public abstract class Véhicule
     {
         private static int Nb = 1;
         #region Getter/setter

@@ -28,23 +28,29 @@ namespace Exercice_révision_2
 
             }
 
+
+
+            Voiture3.Démarrer();
+            Camion1.Accélérer();
+
+
             //Demande en cours
             Console.WriteLine();
-            Console.WriteLine("N'afficher que les plaques terminant par 3");
+            Console.WriteLine("N'afficher que les plaques terminant par 2");
+
+            Console.WriteLine("Entrer ce que vous recherchez");
+            string recherche = Console.ReadLine();
 
             foreach (var v in ListeVéhicules)
             {
 
-                if (v.Immatriculation[v.Immatriculation.Length - 1].ToString() == "3")
+                if (v.Immatriculation.Contains(recherche))
                 {
                     Console.WriteLine(v.Description());
 
                 }
 
             }
-
-            Voiture3.Démarrer();
-            Camion1.Accélérer();
 
         }
     }
