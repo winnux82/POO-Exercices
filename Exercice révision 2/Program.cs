@@ -36,22 +36,34 @@ namespace Exercice_révision_2
 
             //Demande en cours
             Console.WriteLine();
-            Console.WriteLine("N'afficher que les plaques terminant par 2");
 
-            Console.WriteLine("Entrer ce que vous recherchez");
-            string recherche = Console.ReadLine();
 
-            foreach (var v in ListeVéhicules)
+            string recherche;
+            bool Escape;
+
+            do
             {
+                Console.Write("\nEntrez la plaque que vous recherchez : ");
+                recherche = Console.ReadLine();
 
-                if (v.Immatriculation.Contains(recherche))
+                if (recherche == "exit")
+                    break;
+                
+                foreach (var v in ListeVéhicules)
                 {
-                    Console.WriteLine(v.Description());
+
+                    if(v.Immatriculation.Contains(recherche.ToUpper()))
+                    {
+                        Console.WriteLine(v.Description());
+
+                    }
 
                 }
+            }while(true);
 
-            }
 
         }
     }
+
+
 }
