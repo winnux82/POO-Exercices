@@ -20,7 +20,14 @@ namespace Exercice_de_révision
 
             Galaxie voie_lactée = new Galaxie("Voie Lactée", ListePlanetes);
 
-            voie_lactée.Description();
+            Console.WriteLine(voie_lactée.Description());
+
+            
+            foreach (Planete planete in ListePlanetes)
+            {
+                Console.WriteLine(planete.Description());
+            }
+
 
         }
     }

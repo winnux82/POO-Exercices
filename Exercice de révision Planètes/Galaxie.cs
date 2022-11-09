@@ -32,11 +32,6 @@ namespace Exercice_de_révision_Planètes
         public void Description()
         {
             Console.WriteLine($"Je suis la galaxie {Nom} et je possède {ListePlanete.Count} planètes.");
-            Console.WriteLine($"La galaxie {Nom} est composée de :");
-            foreach(Planete planete in ListePlanete)
-            {
-                planete.Description();
-            }
 
         
         }

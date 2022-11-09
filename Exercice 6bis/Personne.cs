@@ -49,7 +49,7 @@ namespace Exercice_6
 
         public virtual void Présentation()
         {
-            Console.WriteLine($"Le nom : {Nom} {Prenom}, sa date de naissance est: {DateNaissance}");  
+            Console.WriteLine($"Le nom : {Nom} {Prenom}, sa date de naissance est: {DateNaissance.ToShortDateString()}");  
         }
 
     }

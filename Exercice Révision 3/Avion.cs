@@ -8,7 +8,11 @@ namespace Exercice_Révision_3
 {
     public abstract class Avion
     {
-        private static int inc;
+        //le membre static est commun à toutes les classes. Variable de classe et non d'instance.
+        //base référence à la classe mère
+        //Valeur ou référence
+        //type déclaré A, type constaté B
+        private static int inc =1;
         private int _identifiant;
 
         public int Identifiant
@@ -20,7 +24,7 @@ namespace Exercice_Révision_3
 
         private string _immatriculation;
 
-        public string Immatriculation
+        protected string Immatriculation
         {
             get { return _immatriculation; }
             set { _immatriculation = value; }
@@ -38,7 +42,7 @@ namespace Exercice_Révision_3
 
 
         private string _modèle;
-        public string Modèle
+        protected string Modèle
         {
             get { return _modèle; }
             set { _modèle = value; }
@@ -60,9 +64,11 @@ namespace Exercice_Révision_3
             DateConstruction = dateConstruction;
         }
 
-        public string  Description()
+        public virtual string Description()
         {
-            return $"{Identifiant} :: {Immatriculation} :: {Modèle} :: {DateConstruction} ";
+            //return $"{Identifiant} :: {Immatriculation} :: {Modèle} :: {DateConstruction} ";
+            return $"{Identifiant} :: {Immatriculation} :: {Modèle} :: {DateConstruction.ToShortDateString()} ";
+
         }
 
         public virtual void Démarrer()

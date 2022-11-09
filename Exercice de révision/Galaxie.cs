@@ -29,16 +29,16 @@ namespace Exercice_de_révision
             return ($"Je suis la galaxie {NomGalaxie} et je possède {ListePlanetes.Count} planètes.");
         }
 
-        public void Description()
+        public string Description()
         {
-            Console.WriteLine($"Je suis la galaxie {NomGalaxie} et je possède {ListePlanetes.Count} planètes.");
+            return($"Je suis la galaxie {NomGalaxie} et je possède {ListePlanetes.Count} planètes.");
             if (ListePlanetes.Count > 0)
             {
                 //ListePlanetes = ListePlanetes.OrderBy(p => p.Nom).ToList();
                 ListePlanetes = ListePlanetes.OrderBy(n => n.Nom).ToList();
                 foreach (Planete p in ListePlanetes)
                 {
-                    p.Description();
+                    Console.WriteLine(p.Description());
                 }
             }
         }

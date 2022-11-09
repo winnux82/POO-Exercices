@@ -56,10 +56,10 @@ namespace Exercice_de_révision
         //ctor
 
 
-        public void Description()
+        public string Description()
         {
             //Console.WriteLine($"Je suis la planète {1} de masse {2} relative par rapport à la terre.",Nom,Masse);
-            Console.WriteLine($"Je suis la planète {Nom} de masse {Masse} relative par rapport à la terre.");
+            return($"Je suis la planète {Nom} de masse {Masse} relative par rapport à la terre.");
         }
 
 

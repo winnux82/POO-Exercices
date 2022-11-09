@@ -24,7 +24,7 @@ namespace Exercice_Révision_3
             Console.WriteLine($"L’avion {Modèle} coupe ses moteurs et ouvre son train d’atterrissage");
         }
 
-        public new string Description()
+        public override string Description()
         {
             return base.Description() +  $":: {NbPlace} ";
  }

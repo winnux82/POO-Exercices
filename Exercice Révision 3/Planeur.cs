@@ -23,7 +23,7 @@ namespace Exercice_Révision_3
             Console.WriteLine($"Le Planeur {Modèle} perd de l'altitude");
         }
 
-        public new string Description()
+        public override string Description()
         {
             return base.Description() + $":: {Poids} ";
         }

@@ -34,12 +34,13 @@ namespace Exercice_révision_2
             Camion1.Accélérer();
 
 
+
             //Demande en cours
             Console.WriteLine();
 
 
             string recherche;
-            bool Escape;
+
 
             do
             {
@@ -48,18 +49,18 @@ namespace Exercice_révision_2
 
                 if (recherche == "exit")
                     break;
-                
+
                 foreach (var v in ListeVéhicules)
                 {
 
-                    if(v.Immatriculation.Contains(recherche.ToUpper()))
+                    if (v.Immatriculation.Contains(recherche.ToUpper()))
                     {
                         Console.WriteLine(v.Description());
 
                     }
 
                 }
-            }while(true);
+            } while (true);
 
 
         }

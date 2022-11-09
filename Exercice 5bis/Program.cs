@@ -8,6 +8,11 @@ namespace Exercice_5
     {
         public static void Main(string[] args)
         {
+
+            static void Mouvement(Animal animal)
+            {
+                animal.SeDeplace(); 
+            }
             /*
             Animal Chien = new Animal("aboie",2,12);
 
@@ -37,7 +42,7 @@ namespace Exercice_5
 
             }
             */
-            
+
             
 
             Animal OiseauEssai = new Oiseau(2);
@@ -47,7 +52,7 @@ namespace Exercice_5
 
 
             Oiseau Moineau = new Oiseau("piaille ", 2);
-
+            Mouvement(Moineau);
 
             Aigle aigle1 = new Aigle("glati", 3);
 
@@ -58,11 +63,14 @@ namespace Exercice_5
 
             Aigle aigle2 = new Aigle("glouglou", 7);
 
-            Moineau.Crie();
-            Moineau.Vieillit(60);
-            Moineau.Mange();
-            Moineau.SeDeplace();
-            Moineau.Description();
+            //Moineau.Crie();
+            //Moineau.Vieillit(60);
+            //Moineau.Mange();
+            //Moineau.SeDeplace();
+            //Moineau.Description();
+
+            
+
 
 
 
